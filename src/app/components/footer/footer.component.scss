@@ -1,0 +1,6 @@
+.text-muted-foreground { color: #8b92a8; }
+.icons { display:flex; align-items:center; justify-content:center; }
+.icon { display:inline-flex; width:44px; height:44px; align-items:center; justify-content:center; border-radius:8px; background: rgba(255,255,255,0.02); color: #cbd5ff; transition: all .18s ease; }
+.icon svg { width:20px; height:20px; }
+.icon:hover { transform: translateY(-3px); background: rgba(167,139,250,0.06); color: #fff; }
+.text-xs { color: #9aa0b2; }
