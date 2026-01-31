@@ -21,22 +21,58 @@ interface Project {
 export class ProjectsComponent implements OnInit, OnDestroy {
   projects: Project[] = [
     {
-      title: 'E-Commerce Backend',
-      description: 'NestJS REST API with PostgreSQL, JWT auth and order management.',
-      image: 'assets/img/project1.jpg',
+      title: 'Trash runner game',
+      description: 'juego 3d estilo shooter endless runner desarrollado en godot.',
+      image: 'assets/img/trash-runner-game.png',
       primaryLabel: 'Project Showcase',
       primaryHref: '#',
       secondaryLabel: 'View Code',
-      secondaryHref: '#'
+      secondaryHref: 'https://github.com/Ilesandres/game-recolections'
     },
     {
-      title: 'Project Management Dashboard',
-      description: 'Fullstack app with real-time updates and drag-and-drop tasks.',
-      image: 'assets/img/project2.jpg',
+      title: 'DonacionApp',
+      description: 'Fullstack app with comunicacion en tienpo real y localizaciones de determinadas organizaciones',
+      image: 'assets/img/donarapp.png',
       primaryLabel: 'Video Demo',
       primaryHref: '#',
       secondaryLabel: 'View Code',
-      secondaryHref: '#'
+      secondaryHref: 'https://github.com/orgs/DonacionApp/repositories'
+    },
+    {
+      title: 'Notedesk',
+      description: 'Fullstack app con comunicacion en tiempo real de guardado de notas',
+      image: 'assets/img/noteDesk-app.png',
+      primaryLabel: 'Video Demo',
+      primaryHref: '#',
+      secondaryLabel: 'View Code',
+      secondaryHref: 'https://github.com/Ilesandres/notesDesk?tab=readme-ov-file'
+    },
+    {
+      title: 'Rick and Morty-landing',
+      description: 'landing de personajes de rick y motry',
+      image: 'assets/img/rick-motry-landing.png',
+      primaryLabel: 'Project Showcase',
+      primaryHref: 'https://ilesandres.github.io/charctersMorty/',
+      secondaryLabel: 'View Code',
+      secondaryHref: 'https://github.com/Ilesandres/charctersMorty'
+    },
+    {
+      title: 'Balanceapp',
+      description: 'full estack app para llevar el control de gastos e ingresos en flutter y firebase',
+      image: 'assets/img/balanceapp-android.png',
+      primaryLabel: 'Video Demo',
+      primaryHref: '#',
+      secondaryLabel: 'View Code',
+      secondaryHref: 'https://github.com/Ilesandres/balanceapp'
+    },
+    {
+      title: 'Mas Proyecots',
+      description: 'mas proyectos en mi github',
+      image: 'assets/img/github.png',
+      primaryLabel: 'Video Demo',
+      primaryHref: '#',
+      secondaryLabel: 'View Code',
+      secondaryHref: 'https://github.com/Ilesandres'
     }
   ];
 
