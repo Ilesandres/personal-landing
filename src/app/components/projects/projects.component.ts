@@ -31,7 +31,7 @@ export class ProjectsComponent implements OnInit, OnDestroy {
     },
     {
       title: 'DonacionApp',
-      description: 'Fullstack app with comunicacion en tienpo real y localizaciones de determinadas organizaciones',
+      description: 'Fullstack app con comunicacion en tiempo real y localizaciones de determinadas organizaciones',
       image: 'assets/img/donarapp.png',
       primaryLabel: 'Video Demo',
       primaryHref: '#',
