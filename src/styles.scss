@@ -1,1 +1,5 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global styles - import Tailwind entry (which imports theme.css) */
+@import 'app/styles/tailwind.css';
+
+/* Your global overrides can go below */
+
