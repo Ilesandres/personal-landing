@@ -3,3 +3,41 @@
 .text-accent { color: #a5b4fc; }
 .text-muted-foreground { color: #717182; }
 .hover\:bg-accent:hover { background: #a5b4fc; }
+
+/* Modal for profile image */
+.image-modal {
+	position: fixed; inset: 0; display: grid; place-items: center; z-index: 60;
+}
+.image-modal__backdrop { position: absolute; inset: 0; background: rgba(2,6,23,0.75); }
+.image-modal__content {
+	position: relative;
+	max-width: 90vw;
+	max-height: 90vh;
+	z-index: 61;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1.25rem; /* space around image */
+	border-radius: .75rem;
+	background: rgba(6,8,20,0.6); /* subtle panel so image doesn't touch edges */
+	border: 1px solid rgba(255,255,255,0.03);
+	box-shadow: 0 18px 60px rgba(2,6,23,0.75);
+}
+.image-modal__img {
+	/* Ensure the image always fits inside the viewport with comfortable padding */
+	display: block;
+	width: auto;
+	height: auto;
+	max-width: calc(100vw - 3rem);
+	max-height: calc(100vh - 3rem);
+	object-fit: contain;
+	border-radius: .5rem;
+	box-shadow: 0 20px 50px rgba(2,6,23,0.7);
+}
+
+@media (max-width: 640px) {
+	.image-modal__content { padding: 0.75rem; }
+	.image-modal__img { max-width: calc(100vw - 2rem); max-height: calc(100vh - 2rem); }
+}
+.image-modal__close { position: absolute; top: .5rem; right: .5rem; background: rgba(0,0,0,0.6); color: white; border: none; width: 2.4rem; height:2.4rem; border-radius:999px; cursor:pointer; }
+.cursor-zoom-in { cursor: zoom-in; }

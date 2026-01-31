@@ -8,4 +8,8 @@ import { CommonModule } from '@angular/common';
   templateUrl: './hero.component.html',
   styleUrls: ['./hero.component.scss']
 })
-export class HeroComponent {}
+export class HeroComponent {
+  public imageOpen = false;
+  openImage() { this.imageOpen = true; }
+  closeImage() { this.imageOpen = false; }
+}
