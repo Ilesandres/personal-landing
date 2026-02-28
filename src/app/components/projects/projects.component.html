@@ -1,0 +1,36 @@
+<section class="py-16 px-4" id="projects">
+  <h2 class="text-4xl font-bold text-center mb-6 text-primary">Proyectos Destacados</h2>
+
+  <div class="carousel max-w-4xl mx-auto"
+       role="region" aria-label="Proyectos destacados"
+       (mouseenter)="pause()" (mouseleave)="resume()"
+       (touchstart)="onTouchStart($event)" (touchmove)="onTouchMove($event)" (touchend)="onTouchEnd()">
+
+    <div class="track" [style.transform]="'translateX(-' + (current * 100) + '%)'">
+      <ng-container *ngFor="let p of projects; let idx = index">
+        <article class="slide bg-card rounded-lg overflow-hidden mx-3" [attr.aria-hidden]="current!==idx">
+          <div class="media h-64 w-full overflow-hidden">
+            <img [src]="p.image" [alt]="p.title" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+            <div class="overlay p-6">
+              <h3 class="text-2xl font-bold mb-2">{{ p.title }}</h3>
+              <p class="mb-4 text-muted max-w-prose">{{ p.description }}</p>
+              <div class="flex items-center">
+                <a [href]="p.primaryHref" class="inline-block px-4 py-2 rounded bg-primary text-white font-semibold hover:bg-accent transition">{{ p.primaryLabel }}</a>
+                <a [href]="p.secondaryHref" class="ml-4 text-accent underline">{{ p.secondaryLabel }}</a>
+              </div>
+            </div>
+          </div>
+        </article>
+      </ng-container>
+    </div>
+
+    <button class="prev" (click)="prev()" [attr.aria-label]="'Previous slide'">‹</button>
+    <button class="next" (click)="next()" [attr.aria-label]="'Next slide'">›</button>
+
+    <div class="indicators mt-4 text-center">
+      <button *ngFor="let p of projects; let i = index" (click)="goTo(i)" [class.active]="current===i" [attr.aria-label]="'Go to slide ' + (i+1)">
+        <img [src]="p.image" [alt]="p.title" />
+      </button>
+    </div>
+  </div>
+</section>
