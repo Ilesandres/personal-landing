@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, map, shareReplay } from 'rxjs';
-import { GithubOrg, GithubRepo, GithubUser } from '../models/github';
+import { GithubEvent, GithubOrg, GithubRepo, GithubUser } from '../models/github';
 
 const API = 'https://api.github.com';
 const USER = 'Ilesandres';
@@ -16,6 +16,7 @@ export class GithubService {
 	private readonly userRepos$: Observable<GithubRepo[]>;
 	private readonly orgRepos$: Observable<GithubRepo[]>;
 	private readonly commits$: Observable<{ total_count: number }>;
+	private readonly events$: Observable<GithubEvent[]>;
 
 	constructor(private readonly http: HttpClient) {
 		this.user$ = this.http
@@ -39,6 +40,10 @@ export class GithubService {
 				headers: { Accept: COMMITS_ACCEPT },
 			})
 			.pipe(shareReplay(1));
+
+		this.events$ = this.http
+			.get<GithubEvent[]>(`${API}/users/${USER}/events?per_page=100`)
+			.pipe(shareReplay(1));
 	}
 
 	getUser(): Observable<GithubUser> {
@@ -55,6 +60,10 @@ export class GithubService {
 
 	getOrgRepos(): Observable<GithubRepo[]> {
 		return this.orgRepos$;
+	}
+
+	getEvents(): Observable<GithubEvent[]> {
+		return this.events$;
 	}
 
 	getCommitCount(): Observable<number> {

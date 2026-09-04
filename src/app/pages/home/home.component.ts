@@ -6,12 +6,13 @@ import { PROFILE } from '../../core/data/profile';
 import { GithubRepo } from '../../core/models/github';
 import { GithubService } from '../../core/services/github.service';
 import { bannerFor } from '../../core/utils/banner';
+import { GithubActivityComponent } from './github-activity.component';
 import { TypedTextComponent } from './typed-text.component';
 
 @Component({
 	standalone: true,
 	selector: 'app-home',
-	imports: [AsyncPipe, RouterLink, TypedTextComponent],
+	imports: [AsyncPipe, RouterLink, TypedTextComponent, GithubActivityComponent],
 	templateUrl: './home.component.html',
 	styleUrl: './home.component.scss',
 })

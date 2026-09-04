@@ -44,3 +44,29 @@ export interface GithubRepo {
 	fork: boolean;
 	pushed_at: string;
 }
+
+export interface GithubEvent {
+	type: string;
+	repo: { name: string };
+	payload?: {
+		action?: string | null;
+		ref?: string | null;
+		ref_type?: string | null;
+		release?: { tag_name?: string; name?: string | null } | null;
+	} | null;
+	created_at: string;
+}
+
+export interface LanguageStat {
+	name: string;
+	count: number;
+	pct: number;
+}
+
+export interface ActivityItem {
+	type: string;
+	repo: string;
+	repoUrl: string;
+	action: string;
+	when: string;
+}
