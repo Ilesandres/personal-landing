@@ -11,3 +11,13 @@
 		color: var(--primary);
 	}
 }
+
+.contact-icon {
+	display: inline-grid;
+	height: 2.75rem;
+	width: 2.75rem;
+	place-items: center;
+	border-radius: 0.75rem;
+	border: 1px solid var(--border);
+	background: rgb(34 211 238 / 0.08);
+}

@@ -1,5 +1,77 @@
-<section class="py-16">
-  <p class="section-kicker">Contacto</p>
-  <h1 class="text-4xl font-extrabold tracking-tight text-foreground">Hablemos</h1>
-  <p class="mt-4 max-w-2xl text-muted-foreground">Mis canales y la hoja de vida.</p>
+<section class="py-16 md:py-24">
+  <p class="section-kicker">// Contacto</p>
+  <h1 class="mt-4 text-4xl font-extrabold tracking-tight text-foreground md:text-5xl">Hablemos</h1>
+  <p class="mt-4 max-w-2xl text-lg text-muted-foreground">
+    ¿Tienes un proyecto en mente, buscas apoyo backend o solo quieres saludar? Escríbeme por cualquiera de estos canales.
+  </p>
+
+  <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    @for (card of cards; track card.title) {
+      <a
+        [href]="card.href"
+        [target]="card.external ? '_blank' : null"
+        [rel]="card.external ? 'noopener' : null"
+        class="group rounded-2xl border border-border/60 bg-card p-6 transition-colors hover:border-primary/40"
+      >
+        <div class="contact-icon text-accent" aria-hidden="true">
+          @switch (card.icon) {
+            @case ('email') {
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="M22 6l-10 7L2 6"></path>
+              </svg>
+            }
+            @case ('phone') {
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"></path>
+              </svg>
+            }
+            @case ('github') {
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 .297a12 12 0 00-3.79 23.392c.6.11.82-.26.82-.577v-2.02c-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.09-.746.083-.731.083-.731 1.205.085 1.84 1.238 1.84 1.238 1.07 1.835 2.807 1.305 3.492.997.108-.775.42-1.305.763-1.605-2.665-.303-5.467-1.332-5.467-5.93 0-1.31.468-2.38 1.236-3.22-.124-.303-.536-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.48 11.48 0 016 0c2.29-1.552 3.297-1.23 3.297-1.23.656 1.653.244 2.873.12 3.176.77.84 1.235 1.91 1.235 3.22 0 4.61-2.807 5.624-5.48 5.92.432.372.817 1.102.817 2.222v3.293c0 .32.216.694.824.576A12 12 0 0012 .297"/>
+              </svg>
+            }
+            @case ('linkedin') {
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4v14h-4V8zM8.5 8h3.84v2.02h.05c.54-1 1.86-2.02 3.83-2.02 4.1 0 4.86 2.7 4.86 6.2V22h-4v-6.3c0-1.5-.03-3.44-2.1-3.44-2.1 0-2.42 1.64-2.42 3.34V22h-4V8z"/>
+              </svg>
+            }
+            @case ('notion') {
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+                <path d="M4 4l16-1v17l-16 1V4zM9 6h10M9 11h10M9 16h10M7 6c-1 0-1.5-.5-2-1m16 16l1-13"></path>
+              </svg>
+            }
+            @case ('org') {
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"></path>
+              </svg>
+            }
+          }
+        </div>
+        <h2 class="mt-4 font-semibold text-foreground">{{ card.title }}</h2>
+        <p class="mt-1 break-all text-sm text-muted-foreground transition-colors group-hover:text-accent">{{ card.value }}</p>
+      </a>
+    }
+  </div>
+
+  <div class="mt-12 flex flex-col items-start gap-6 rounded-3xl border border-border/60 bg-gradient-to-br from-primary/15 via-card to-accent/10 p-8 md:flex-row md:items-center md:justify-between md:p-10">
+    <div>
+      <h2 class="text-2xl font-bold text-foreground">Descarga mi hoja de vida</h2>
+      <p class="mt-2 max-w-xl text-sm text-muted-foreground">
+        Todo resumido en un documento: formación, experiencia y habilidades. El enlace siempre apunta a la versión más reciente.
+      </p>
+    </div>
+    <a
+      [href]="profile.cvUrl"
+      target="_blank"
+      rel="noopener"
+      class="inline-flex shrink-0 items-center gap-2 rounded-xl bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition-colors hover:bg-primary/90"
+    >
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"></path>
+      </svg>
+      Descargar CV
+    </a>
+  </div>
 </section>
