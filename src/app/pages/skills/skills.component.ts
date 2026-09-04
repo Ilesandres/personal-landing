@@ -33,6 +33,7 @@ export class SkillsComponent {
 				{ name: 'Java', level: 'Intermedio', levelId: 2 },
 				{ name: 'Spring Boot', level: 'Intermedio', levelId: 2 },
 				{ name: 'Python', level: 'Básico', levelId: 1 },
+				{ name: 'Integraciones con IA', level: 'Intermedio', levelId: 2 },
 			],
 		},
 		{
@@ -70,7 +71,10 @@ export class SkillsComponent {
 			skills: [
 				{ name: 'PostgreSQL', level: 'Intermedio', levelId: 2 },
 				{ name: 'MySQL', level: 'Intermedio', levelId: 2 },
+				{ name: 'MariaDB', level: 'Intermedio', levelId: 2 },
 				{ name: 'MongoDB', level: 'Básico', levelId: 1 },
+				{ name: 'Cassandra', level: 'Básico', levelId: 1 },
+				{ name: 'Neo4j', level: 'Intermedio', levelId: 2 },
 				{ name: 'Redis', level: 'Básico', levelId: 1 },
 			],
 		},
