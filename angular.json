@@ -32,11 +32,6 @@
               },
               {
                 "glob": "**/*",
-                "input": "src/app/assets",
-                "output": "assets"
-              },
-              {
-                "glob": "**/*",
                 "input": "src/assets",
                 "output": "assets"
               }
@@ -99,11 +94,6 @@
               {
                 "glob": "**/*",
                 "input": "public"
-              },
-              {
-                "glob": "**/*",
-                "input": "src/app/assets",
-                "output": "assets"
               },
               {
                 "glob": "**/*",
