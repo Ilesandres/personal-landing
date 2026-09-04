@@ -1,6 +1,7 @@
 import { AsyncPipe } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { map } from 'rxjs';
+import { RevealDirective } from '../../core/directives/reveal.directive';
 import { GithubEvent, GithubRepo } from '../../core/models/github';
 import { GithubService } from '../../core/services/github.service';
 
@@ -90,7 +91,7 @@ function eventTone(type: string): string {
 @Component({
 	standalone: true,
 	selector: 'app-github-activity',
-	imports: [AsyncPipe],
+	imports: [AsyncPipe, RevealDirective],
 	templateUrl: './github-activity.component.html',
 })
 export class GithubActivityComponent {

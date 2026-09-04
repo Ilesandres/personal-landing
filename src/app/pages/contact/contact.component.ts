@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RevealDirective } from '../../core/directives/reveal.directive';
 import { PROFILE } from '../../core/data/profile';
 
 interface ContactCard {
@@ -12,6 +13,7 @@ interface ContactCard {
 @Component({
 	standalone: true,
 	selector: 'app-contact',
+	imports: [RevealDirective],
 	templateUrl: './contact.component.html',
 	styleUrl: './contact.component.scss',
 })

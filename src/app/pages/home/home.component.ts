@@ -2,6 +2,7 @@ import { AsyncPipe } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { combineLatest, map } from 'rxjs';
+import { RevealDirective } from '../../core/directives/reveal.directive';
 import { PROFILE } from '../../core/data/profile';
 import { GithubRepo } from '../../core/models/github';
 import { GithubService } from '../../core/services/github.service';
@@ -12,7 +13,7 @@ import { TypedTextComponent } from './typed-text.component';
 @Component({
 	standalone: true,
 	selector: 'app-home',
-	imports: [AsyncPipe, RouterLink, TypedTextComponent, GithubActivityComponent],
+	imports: [AsyncPipe, RouterLink, TypedTextComponent, GithubActivityComponent, RevealDirective],
 	templateUrl: './home.component.html',
 	styleUrl: './home.component.scss',
 })

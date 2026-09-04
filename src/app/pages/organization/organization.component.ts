@@ -2,6 +2,7 @@ import { AsyncPipe } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { map } from 'rxjs';
+import { RevealDirective } from '../../core/directives/reveal.directive';
 import { PROFILE } from '../../core/data/profile';
 import { GithubService } from '../../core/services/github.service';
 import { bannerFor } from '../../core/utils/banner';
@@ -9,7 +10,7 @@ import { bannerFor } from '../../core/utils/banner';
 @Component({
 	standalone: true,
 	selector: 'app-organization',
-	imports: [AsyncPipe, RouterLink],
+	imports: [AsyncPipe, RouterLink, RevealDirective],
 	templateUrl: './organization.component.html',
 	styleUrl: './organization.component.scss',
 })

@@ -2,6 +2,7 @@ import { AsyncPipe } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { combineLatest, map } from 'rxjs';
 import { BehaviorSubject } from 'rxjs';
+import { RevealDirective } from '../../core/directives/reveal.directive';
 import { GithubRepo } from '../../core/models/github';
 import { GithubService } from '../../core/services/github.service';
 import { bannerFor } from '../../core/utils/banner';
@@ -11,7 +12,7 @@ const FEATURED = ['personal-landing', 'Tienda-react-sql-node', 'prueba-front-don
 @Component({
 	standalone: true,
 	selector: 'app-projects',
-	imports: [AsyncPipe],
+	imports: [AsyncPipe, RevealDirective],
 	templateUrl: './projects.component.html',
 	styleUrl: './projects.component.scss',
 })

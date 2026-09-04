@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
+import { RevealDirective } from '../../core/directives/reveal.directive';
 import { PROFILE } from '../../core/data/profile';
 
 @Component({
 	standalone: true,
 	selector: 'app-about',
+	imports: [RevealDirective],
 	templateUrl: './about.component.html',
 	styleUrl: './about.component.scss',
 })
