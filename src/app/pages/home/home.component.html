@@ -43,15 +43,28 @@
   </div>
 
   <div class="relative mx-auto w-fit">
-    <div class="absolute -inset-4 rounded-[2.5rem] bg-gradient-to-br from-primary/50 via-transparent to-accent/50 blur-2xl" aria-hidden="true"></div>
-    <div class="relative rounded-[2rem] border border-border/60 bg-card p-2">
+    <div class="absolute -inset-5 rounded-[2.75rem] bg-gradient-to-br from-primary/40 via-transparent to-accent/40 blur-2xl" aria-hidden="true"></div>
+    <div class="group relative rounded-[2rem] border border-border/60 bg-card p-2 shadow-2xl shadow-black/40">
       <img
         src="assets/img/profile.jpeg"
         alt="Foto de perfil de Andres Iles"
-        class="h-72 w-72 rounded-[1.6rem] object-cover sm:h-80 sm:w-80"
+        class="h-72 w-72 rounded-[1.5rem] object-cover object-top transition-transform duration-500 group-hover:scale-[1.02] sm:h-80 sm:w-80"
         width="320"
         height="320"
       />
+    </div>
+
+    <div class="absolute -left-5 -top-5 grid h-12 w-12 place-items-center rounded-xl border border-border/60 bg-card text-accent shadow-lg shadow-black/30" aria-hidden="true">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="3" width="20" height="7" rx="1.5"></rect>
+        <rect x="2" y="14" width="20" height="7" rx="1.5"></rect>
+        <path d="M6 6.5h.01M6 17.5h.01M10 6.5h4M10 17.5h4"></path>
+      </svg>
+    </div>
+
+    <div class="absolute -right-4 -top-4 hidden items-center gap-2 rounded-xl border border-border/60 bg-card px-3 py-1.5 font-mono text-xs font-medium text-foreground shadow-lg shadow-black/30 sm:flex">
+      <span class="h-1.5 w-1.5 rounded-full bg-emerald-400" aria-hidden="true"></span>
+      NestJS · Node.js
     </div>
 
     @if ((user$ | async); as user) {
