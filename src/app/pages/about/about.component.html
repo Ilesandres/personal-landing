@@ -1,5 +1,154 @@
-<section class="py-16">
-  <p class="section-kicker">Sobre mí</p>
-  <h1 class="text-4xl font-extrabold tracking-tight text-foreground">Acerca de mí</h1>
-  <p class="mt-4 max-w-2xl text-muted-foreground">Trayectoria, educación y experiencia.</p>
+<section class="py-16 md:py-24">
+  <p class="section-kicker">// Sobre mí</p>
+  <h1 class="mt-4 text-4xl font-extrabold tracking-tight text-foreground md:text-5xl">Sobre mí</h1>
+
+  <div class="mt-10 grid gap-12 lg:grid-cols-3">
+    <div class="lg:col-span-2">
+      <h2 class="text-xl font-bold text-foreground">Mi historia</h2>
+      <div class="mt-4 space-y-4 text-base leading-relaxed text-muted-foreground">
+        <p>
+          Mi nombre es <strong class="text-foreground">Breiner Andres Iles Sambony</strong>. Nací en Mocoa, Putumayo,
+          Colombia, y desde pequeño sentí curiosidad por la tecnología. Aunque no tuve equipos de cómputo durante buena
+          parte de mi infancia, al entrar a la secundaria tuve acceso a equipos institucionales; eso se intensificó en
+          noveno grado, cuando me adentré en el mundo de la programación con un curso básico de computación, programación
+          y redes.
+        </p>
+        <p>
+          Ese camino me llevó a graduarme a la vez de <strong class="text-foreground">bachiller académico</strong> y de
+          <strong class="text-foreground">técnico en sistemas</strong>. Hoy soy
+          <strong class="text-foreground">Tecnólogo en Desarrollo de Software</strong> y continúo con
+          <strong class="text-foreground">Ingeniería en Sistemas</strong>. Mi enfoque principal es el
+          <strong class="text-foreground">backend</strong>, aunque desarrollo frontend cuando el proyecto lo necesita.
+        </p>
+        <p>
+          Soy amante del aprendizaje continuo y del trabajo colaborativo. Uso herramientas como Notion para organizar
+          mis proyectos y Git para el control de versiones. En el tiempo libre juego voleibol, mi deporte favorito.
+        </p>
+      </div>
+
+      <div class="mt-8 grid gap-4 sm:grid-cols-2">
+        @for (area of focusAreas; track area.title) {
+          <div class="rounded-2xl border border-border/60 bg-card p-5 transition-colors hover:border-primary/40">
+            <div class="icon-chip text-accent" aria-hidden="true">
+              @switch (area.icon) {
+                @case ('backend') {
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="3" width="20" height="7" rx="1.5"></rect>
+                    <rect x="2" y="14" width="20" height="7" rx="1.5"></rect>
+                    <path d="M6 6.5h.01M6 17.5h.01M10 6.5h4M10 17.5h4"></path>
+                  </svg>
+                }
+                @case ('database') {
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <ellipse cx="12" cy="5" rx="8" ry="3"></ellipse>
+                    <path d="M4 5v6c0 1.66 3.58 3 8 3s8-1.34 8-3V5"></path>
+                    <path d="M4 11v6c0 1.66 3.58 3 8 3s8-1.34 8-3v-6"></path>
+                  </svg>
+                }
+                @case ('frontend') {
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                    <path d="M6 9l3 3-3 3M13 15h5"></path>
+                  </svg>
+                }
+                @case ('systems') {
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="3" width="20" height="14" rx="2"></rect>
+                    <path d="M8 21h8M12 17v4"></path>
+                  </svg>
+                }
+              }
+            </div>
+            <h3 class="mt-3 font-semibold text-foreground">{{ area.title }}</h3>
+            <p class="mt-1 text-sm leading-relaxed text-muted-foreground">{{ area.description }}</p>
+          </div>
+        }
+      </div>
+    </div>
+
+    <!-- Información de contacto -->
+    <aside class="lg:col-span-1">
+      <div class="rounded-2xl border border-border/60 bg-card p-6 lg:sticky lg:top-24">
+        <img
+          src="assets/img/profile.jpeg"
+          alt="Foto de perfil de Andres Iles"
+          class="h-28 w-28 rounded-2xl object-cover"
+          width="112"
+          height="112"
+        />
+        <h2 class="mt-4 text-lg font-bold text-foreground">Andres Iles</h2>
+        <p class="text-sm font-medium text-accent">Desarrollador Backend</p>
+        <p class="mt-1 text-sm text-muted-foreground">{{ profile.location }}</p>
+
+        <dl class="mt-5 space-y-3 border-t border-border/60 pt-5 text-sm">
+          <div class="flex items-start gap-3">
+            <svg class="mt-0.5 shrink-0 text-muted-foreground" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="M22 6l-10 7L2 6"></path>
+            </svg>
+            <a [href]="'mailto:' + profile.email" class="break-all text-foreground transition-colors hover:text-accent">{{ profile.email }}</a>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg class="mt-0.5 shrink-0 text-muted-foreground" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"></path>
+            </svg>
+            <a [href]="'tel:' + profile.phone" class="text-foreground transition-colors hover:text-accent">{{ profile.phone }}</a>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg class="mt-0.5 shrink-0 text-muted-foreground" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0116 0z"></path><circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span class="text-foreground">{{ profile.location }}</span>
+          </div>
+        </dl>
+
+        <a
+          [href]="profile.cvUrl"
+          target="_blank"
+          rel="noopener"
+          class="mt-6 flex items-center justify-center rounded-xl bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+        >Descargar hoja de vida</a>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Educación -->
+  <div class="mt-20">
+    <h2 class="text-2xl font-bold text-foreground">Educación</h2>
+    <div class="mt-6 grid gap-4 sm:grid-cols-2">
+      @for (item of education; track item.degree) {
+        <div class="rounded-2xl border border-border/60 bg-card p-5">
+          <div class="flex items-center justify-between gap-3">
+            <span class="rounded-full border border-accent/40 bg-accent/10 px-2.5 py-0.5 font-mono text-xs font-semibold text-accent">{{ item.type }}</span>
+            <span class="text-xs text-muted-foreground">{{ item.period }}</span>
+          </div>
+          <h3 class="mt-3 font-semibold text-foreground">{{ item.degree }}</h3>
+          <p class="mt-1 text-sm text-muted-foreground">{{ item.school }}</p>
+        </div>
+      }
+    </div>
+  </div>
+
+  <!-- Experiencia -->
+  <div class="mt-20">
+    <h2 class="text-2xl font-bold text-foreground">Experiencia profesional</h2>
+    <div class="mt-8 space-y-8">
+      @for (job of experience; track job.role) {
+        <div class="relative border-l border-border/60 pl-6">
+          <span class="absolute -left-[5px] top-1 h-2.5 w-2.5 rounded-full bg-accent" aria-hidden="true"></span>
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <h3 class="font-bold text-foreground">{{ job.role }}</h3>
+            <span class="font-mono text-xs text-muted-foreground">{{ job.period }}</span>
+          </div>
+          <p class="mt-1 text-sm font-medium text-accent">{{ job.company }}
+            <span class="font-normal text-muted-foreground"> · {{ job.location }}</span>
+          </p>
+          <ul class="mt-3 list-disc space-y-1 pl-5 text-sm text-muted-foreground">
+            @for (point of job.points; track point) {
+              <li>{{ point }}</li>
+            }
+          </ul>
+        </div>
+      }
+    </div>
+  </div>
 </section>
