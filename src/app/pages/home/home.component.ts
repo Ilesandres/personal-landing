@@ -22,7 +22,7 @@ export class HomeComponent {
 	protected readonly bannerFor = bannerFor;
 	protected readonly featuredNames = ['personal-landing', 'Tienda-react-sql-node', 'prueba-front-donarApp', 'game-recolections'];
 
-	roles = ['Desarrollador Backend', 'Desarrollador Fullstack', 'Ingeniero de Sistemas en formación'];
+	roles = ['Desarrollador Backend', 'Especialista en NestJS', 'Desarrollador Fullstack', 'Desarrollador Mobile', 'Game Dev · Godot'];
 
 	readonly user$ = this.github.getUser();
 	readonly stats$ = combineLatest([this.github.getUser(), this.github.getCommitCount()]).pipe(

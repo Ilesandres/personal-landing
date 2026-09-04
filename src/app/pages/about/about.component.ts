@@ -10,10 +10,12 @@ import { PROFILE } from '../../core/data/profile';
 export class AboutComponent {
 	protected readonly profile = PROFILE;
 
+	stack = ['NestJS', 'Node.js', 'TypeScript', 'Java', 'Angular', 'PostgreSQL', 'Flutter', 'Godot'];
+
 	focusAreas = [
 		{
 			title: 'Developer Backend',
-			description: 'Arquitectura limpia, APIs REST con NestJS y ecosistema Java, buscando soluciones robustas y escalables.',
+			description: 'Especialista en NestJS (Node.js/TypeScript) y ecosistema Java: APIs REST, arquitectura limpia y sistemas robustos y escalables.',
 			icon: 'backend',
 		},
 		{
@@ -23,8 +25,18 @@ export class AboutComponent {
 		},
 		{
 			title: 'Desarrollo Frontend',
-			description: 'React y Angular para construir el frontend cuando el proyecto lo requiere.',
+			description: 'Angular como herramienta central y React, para construir el frontend cuando el proyecto lo requiere.',
 			icon: 'frontend',
+		},
+		{
+			title: 'Desarrollo Mobile',
+			description: 'Flutter y React Native para llevar soluciones construidas en el backend a dispositivos móviles.',
+			icon: 'mobile',
+		},
+		{
+			title: 'Videojuegos 2D/3D',
+			description: 'Desarrollo de videojuegos en Godot para explorar la programación desde un ángulo creativo.',
+			icon: 'games',
 		},
 		{
 			title: 'Sistemas & Soporte',
@@ -62,14 +74,14 @@ export class AboutComponent {
 
 	experience = [
 		{
-			role: 'Desarrollador Backend',
+			role: 'Desarrollador Backend (NestJS)',
 			company: 'Kamila Innovation',
 			location: 'Mocoa, Putumayo (Remoto)',
-			period: 'Mar. 2026 — Jul. 2026',
+			period: 'Mar. 2026 — actualidad',
 			points: [
-				'Desarrollo de sistemas backend para la empresa: sistemas multidioma y multitenant.',
-				'Integraciones con pasarelas de pago y análisis e implementación de billeteras digitales.',
-				'Trabajo con NestJS, Git (PR y workflows) y gestión de incidencias con Jira.',
+				'Desarrollo de sistemas backend con NestJS y TypeScript como stack principal.',
+				'Sistemas multidioma y multitenant, integración de pasarelas de pago y billeteras digitales.',
+				'Trabajo colaborativo con Git (pull requests y flujos de trabajo), Jira para incidencias y documentación técnica.',
 			],
 		},
 		{

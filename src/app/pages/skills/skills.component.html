@@ -22,6 +22,17 @@
                   <rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="M6 9l3 3-3 3M13 15h5"></path>
                 </svg>
               }
+              @case ('mobile') {
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="6" y="2" width="12" height="20" rx="2.5"></rect><path d="M11 18.5h2"></path>
+                </svg>
+              }
+              @case ('games') {
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 12h4M8 10v4M15 11h.01M18 13h.01"></path>
+                  <path d="M17.32 5H6.68a4 4 0 00-3.98 3.6l-.6 8a3.5 3.5 0 005.9 2.6L10 17.5h4l2 1.7a3.5 3.5 0 005.9-2.6l-.6-8A4 4 0 0017.32 5z"></path>
+                </svg>
+              }
               @case ('database') {
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
                   <ellipse cx="12" cy="5" rx="8" ry="3"></ellipse><path d="M4 5v6c0 1.66 3.58 3 8 3s8-1.34 8-3V5"></path><path d="M4 11v6c0 1.66 3.58 3 8 3s8-1.34 8-3v-6"></path>
@@ -30,16 +41,6 @@
               @case ('tools') {
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"></path>
-                </svg>
-              }
-              @case ('design') {
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 3l8 8-8 8-8-8 8-8z"></path>
-                </svg>
-              }
-              @case ('other') {
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
-                  <circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 3"></path>
                 </svg>
               }
             }
@@ -69,6 +70,21 @@
     <h2 class="text-2xl font-bold text-foreground">Habilidades blandas</h2>
     <div class="mt-6 flex flex-wrap gap-3">
       @for (item of softSkills; track item) {
+        <span class="rounded-full border border-border bg-card px-4 py-2 text-sm text-foreground transition-colors hover:border-accent/60 hover:text-accent">
+          {{ item }}
+        </span>
+      }
+    </div>
+  </div>
+
+  <!-- Otras herramientas -->
+  <div class="mt-14">
+    <h2 class="text-2xl font-bold text-foreground">Otras herramientas</h2>
+    <p class="mt-2 text-sm text-muted-foreground">
+      Diseño, edición y ofimática que complementan el perfil.
+    </p>
+    <div class="mt-6 flex flex-wrap gap-3">
+      @for (item of extraTools; track item) {
         <span class="rounded-full border border-border bg-card px-4 py-2 text-sm text-foreground transition-colors hover:border-accent/60 hover:text-accent">
           {{ item }}
         </span>

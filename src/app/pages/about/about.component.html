@@ -16,9 +16,18 @@
         <p>
           Ese camino me llevó a graduarme a la vez de <strong class="text-foreground">bachiller académico</strong> y de
           <strong class="text-foreground">técnico en sistemas</strong>. Hoy soy
-          <strong class="text-foreground">Tecnólogo en Desarrollo de Software</strong> y continúo con
-          <strong class="text-foreground">Ingeniería en Sistemas</strong>. Mi enfoque principal es el
-          <strong class="text-foreground">backend</strong>, aunque desarrollo frontend cuando el proyecto lo necesita.
+          <strong class="text-foreground">Tecnólogo en Desarrollo de Software</strong>, continúo con
+          <strong class="text-foreground">Ingeniería en Sistemas</strong> y me desempeño como
+          <strong class="text-foreground">desarrollador backend con más de dos años de experiencia</strong>, usando
+          <strong class="text-foreground">NestJS</strong> como lenguaje principal sobre Node.js y TypeScript.
+        </p>
+        <p>
+          Aunque mi enfoque está en el <strong class="text-foreground">backend</strong>, desarrollo frontend cuando el
+          proyecto lo requiere, con <strong class="text-foreground">Angular</strong> como herramienta central y
+          <strong class="text-foreground">React</strong>. De forma complementaria trabajo
+          <strong class="text-foreground">mobile con Flutter y React Native</strong> y
+          <strong class="text-foreground">videojuegos 2D y 3D con Godot</strong>. El resto de mi recorrido se apoya en
+          proyectos institucionales de la Universidad del Putumayo, retos de plataformas y contribuciones open source.
         </p>
         <p>
           Soy amante del aprendizaje continuo y del trabajo colaborativo. Uso herramientas como Notion para organizar
@@ -51,6 +60,18 @@
                     <path d="M6 9l3 3-3 3M13 15h5"></path>
                   </svg>
                 }
+                @case ('mobile') {
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="6" y="2" width="12" height="20" rx="2.5"></rect>
+                    <path d="M11 18.5h2"></path>
+                  </svg>
+                }
+                @case ('games') {
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 12h4M8 10v4M15 11h.01M18 13h.01"></path>
+                    <path d="M17.32 5H6.68a4 4 0 00-3.98 3.6l-.6 8a3.5 3.5 0 005.9 2.6L10 17.5h4l2 1.7a3.5 3.5 0 005.9-2.6l-.6-8A4 4 0 0017.32 5z"></path>
+                  </svg>
+                }
                 @case ('systems') {
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                     <rect x="2" y="3" width="20" height="14" rx="2"></rect>
@@ -77,8 +98,14 @@
           height="112"
         />
         <h2 class="mt-4 text-lg font-bold text-foreground">Andres Iles</h2>
-        <p class="text-sm font-medium text-accent">Desarrollador Backend</p>
+        <p class="text-sm font-medium text-accent">Desarrollador Backend · NestJS</p>
         <p class="mt-1 text-sm text-muted-foreground">{{ profile.location }}</p>
+
+        <dl class="mt-4 flex flex-wrap gap-1.5">
+          @for (skill of stack; track skill) {
+            <dd class="rounded-full border border-border/60 bg-surface px-2.5 py-1 font-mono text-xs text-muted-foreground">{{ skill }}</dd>
+          }
+        </dl>
 
         <dl class="mt-5 space-y-3 border-t border-border/60 pt-5 text-sm">
           <div class="flex items-start gap-3">

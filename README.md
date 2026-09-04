@@ -1,6 +1,6 @@
 # Andres Iles — Portafolio Personal
 
-Landing page / portafolio multipágina de **Andres Iles**, desarrollador backend especializado en NestJS, Node.js y el ecosistema Java.
+Landing page / portafolio multipágina de **Andres Iles**, desarrollador backend con más de 2 años de experiencia, especializado en NestJS sobre Node.js y TypeScript, con desarrollo frontend (Angular), mobile (Flutter y React Native) y videojuegos 2D/3D con Godot.
 
 Construido con **Angular 19** (standalone components, lazy loading) y **Tailwind CSS v4**, con paleta oscura profesional (indigo + cyan).
 
