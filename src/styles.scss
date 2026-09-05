@@ -1,5 +1,2 @@
-/* Global styles - import Tailwind entry (which imports theme.css) */
-@import 'app/styles/tailwind.css';
-
-/* Your global overrides can go below */
-
+/* Global overrides live here.
+ * Tailwind v4 entry point is loaded first via angular.json ("src/app/styles/tailwind.css"). */

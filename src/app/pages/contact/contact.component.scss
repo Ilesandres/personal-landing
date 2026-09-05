@@ -1,0 +1,23 @@
+.section-kicker {
+	font-family: var(--font-mono);
+	font-size: 0.875rem;
+	font-weight: 600;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	color: var(--accent);
+
+	&::before {
+		content: '// ';
+		color: var(--primary);
+	}
+}
+
+.contact-icon {
+	display: inline-grid;
+	height: 2.75rem;
+	width: 2.75rem;
+	place-items: center;
+	border-radius: 0.75rem;
+	border: 1px solid var(--border);
+	background: rgb(113 208 131 / 0.08);
+}

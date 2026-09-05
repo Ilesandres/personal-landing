@@ -1,59 +1,64 @@
-# LandingAndres
+# Andres Iles — Portafolio Personal
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.10.
+Landing page / portafolio multipágina de **Andres Iles**, desarrollador backend con más de 2 años de experiencia, especializado en NestJS sobre Node.js y TypeScript, con desarrollo frontend (Angular), mobile (Flutter y React Native) y videojuegos 2D/3D con Godot.
+
+Construido con **Angular 19** (standalone components, lazy loading) y **Tailwind CSS v4**, con paleta oscura profesional (indigo + cyan).
+
+## Páginas
+
+- `/` — Inicio con hero, roles animados, estadísticas en vivo de GitHub y proyectos destacados.
+- `/about` — Biografía, educación y línea de tiempo de experiencia profesional.
+- `/skills` — Habilidades técnicas por categoría y habilidades blandas.
+- `/projects` — Repositorios en vivo desde GitHub con búsqueda y filtro por lenguaje.
+- `/organization` — Perfil de la organización **WaveSystems** (AIWaveSystems).
+- `/contact` — Canales de contacto y descarga de la hoja de vida.
+- cualquier ruta — Página 404.
+
+## Características técnicas
+
+- Tailwind CSS v4 con `@tailwindcss/postcss` y design tokens propios (`src/app/styles/tailwind.css`).
+- Rutas lazy-loaded por página (`loadComponent`).
+- Servicio `GithubService` que consume la API pública de GitHub con caché (`shareReplay`) y `provideHttpClient(withFetch())`.
+- Datos personales centralizados en `src/app/core/data/profile.ts` (incluye el enlace siempre actualizado del CV).
+- Banners SVG generados para los proyectos en `src/assets/img/projects/`.
+- SEO básico: `lang="es"`, meta description, Open Graph y favicon propio.
 
 ## Development server
 
-To start a local development server, run:
-
 ```bash
-ng serve
+npm start
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Servidor en `http://localhost:4200/` con recarga en caliente.
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Build
 
 ```bash
-ng generate component component-name
+npm run build
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Producción optimizado en `dist/landing-andres`.
+
+## Tests unitarios
 
 ```bash
-ng generate --help
+npm test -- --watch=false --browsers=ChromeHeadless
 ```
 
-## Building
+## Estructura relevante
 
-To build the project run:
-
-```bash
-ng build
 ```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
+src/
+├─ index.html                  # idioma, SEO y fuentes (Inter + JetBrains Mono)
+├─ app/
+│  ├─ app.routes.ts            # rutas con lazy loading y títulos
+│  ├─ core/
+│  │  ├─ data/profile.ts       # datos personales y enlaces
+│  │  ├─ models/github.ts      # tipos de la API de GitHub
+│  │  ├─ services/github.service.ts
+│  │  └─ utils/banner.ts       # mapeo banner SVG ↔ repo
+│  ├─ layout/                  # header (menú activo + móvil) y footer
+│  ├─ pages/                   # home, about, skills, projects, organization, contact, not-found
+│  └─ styles/tailwind.css      # tema y tokens (Tailwind v4)
+└─ assets/img/                 # banners SVG, logo WaveSystems y foto de perfil
 ```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
