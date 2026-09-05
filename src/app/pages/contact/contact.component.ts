@@ -28,7 +28,7 @@ export class ContactComponent {
 		{ title: 'Instagram', value: 'ilesandres8', href: PROFILE.instagramUrl, icon: 'instagram', external: true },
 		{ title: 'Discord', value: 'ilesandres6', href: PROFILE.discordUrl, icon: 'discord', external: true },
 		{ title: 'Facebook', value: 'Ilesandres8', href: PROFILE.facebookUrl, icon: 'facebook', external: true },
-		{ title: 'TikTok', value: '@Ilesandres8', href: PROFILE.tiktokUrl, icon: 'tiktok', external: true },
+		{ title: 'TikTok', value: '@Ilesandres7', href: PROFILE.tiktokUrl, icon: 'tiktok', external: true },
 		{ title: 'Notion', value: 'Mi espacio personal', href: PROFILE.notionUrl, icon: 'notion', external: true },
 		{ title: PROFILE.orgName, value: 'github.com/AIWaveSystems', href: PROFILE.orgUrl, icon: 'org', external: true },
 	];
