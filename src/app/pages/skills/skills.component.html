@@ -52,8 +52,13 @@
           @for (skill of category.skills; track skill.name) {
             <li>
               <div class="flex items-center justify-between gap-3 text-sm">
-                <span class="font-medium text-foreground">{{ skill.name }}</span>
-                <span class="font-mono text-xs text-muted-foreground">{{ skill.level }}</span>
+                <span class="flex min-w-0 items-center gap-2 font-medium text-foreground">
+                  @if (skill.icon) {
+                    <img [src]="'assets/skills/' + skill.icon + '.svg'" alt="" loading="lazy" class="h-4 w-4 shrink-0" aria-hidden="true" />
+                  }
+                  <span class="truncate">{{ skill.name }}</span>
+                </span>
+                <span class="shrink-0 font-mono text-xs text-muted-foreground">{{ skill.level }}</span>
               </div>
               <div class="level-track mt-1.5" role="img" [attr.aria-label]="skill.name + ': ' + skill.level">
                 <span class="level-fill" [class.level-fill--1]="skill.levelId === 1" [class.level-fill--2]="skill.levelId === 2" [class.level-fill--3]="skill.levelId === 3"></span>
