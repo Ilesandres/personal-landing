@@ -79,7 +79,7 @@ export class AboutComponent {
 			role: 'Desarrollador Backend (NestJS)',
 			company: 'Kamila Innovation',
 			location: 'Mocoa, Putumayo (Remoto)',
-			period: 'Mar. 2026 — actualidad',
+			period: 'Mar. 2026 — Ago. 2026',
 			points: [
 				'Desarrollo de sistemas backend con NestJS y TypeScript como stack principal.',
 				'Sistemas multidioma y multitenant, integración de pasarelas de pago y billeteras digitales.',
