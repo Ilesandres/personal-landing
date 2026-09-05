@@ -1,0 +1,20 @@
+.social-icon {
+	display: inline-flex;
+	height: 2.25rem;
+	width: 2.25rem;
+	align-items: center;
+	justify-content: center;
+	border-radius: 0.5rem;
+	border: 1px solid var(--border);
+	color: var(--muted-foreground);
+	transition:
+		border-color 0.2s ease,
+		color 0.2s ease,
+		background-color 0.2s ease;
+
+	&:hover {
+		border-color: var(--accent);
+		color: var(--accent);
+		background: rgb(113 208 131 / 0.08);
+	}
+}

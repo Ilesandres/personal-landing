@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none" role="img">
+  <defs>
+    <linearGradient id="bg-back-biblioteca" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B1120"/>
+      <stop offset="1" stop-color="#0f1a33"/>
+    </linearGradient>
+    <radialGradient id="glow-back-biblioteca" cx="0" cy="0" r="1" gradientTransform="translate(1000 80) rotate(120) scale(700)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="hsl(25 70% 58%)" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="hsl(25 70% 58%)" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="acc-back-biblioteca" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="hsl(25 70% 58%)"/>
+      <stop offset="1" stop-color="hsl(65 75% 62%)"/>
+    </linearGradient>
+    <pattern id="grid-back-biblioteca" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0v48" fill="none" stroke="rgba(148,163,184,0.05)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg-back-biblioteca)"/>
+  <rect width="1200" height="630" fill="url(#grid-back-biblioteca)"/>
+  <rect width="1200" height="630" fill="url(#glow-back-biblioteca)"/>
+  <g opacity="0.9">
+    <path d="M0 480 C 160 420, 300 540, 460 490 S 760 420, 900 470 S 1080 520, 1200 470 V630 H0 Z" fill="hsl(25 70% 58%)" opacity="0.10"/>
+    <path d="M0 520 C 180 470, 340 570, 520 530 S 780 470, 940 510 S 1100 560, 1200 520 V630 H0 Z" fill="hsl(65 75% 62%)" opacity="0.14"/>
+  </g>
+  <g font-family="JetBrains Mono, monospace">
+    <text x="72" y="96" fill="#81E6D9" font-size="26" font-weight="700" letter-spacing="6">WAVESYSTEMS</text>
+    <rect x="72" y="120" width="92" height="6" rx="3" fill="url(#acc-back-biblioteca)"/>
+  </g>
+  <text x="72" y="300" fill="#E6EDF7" font-family="Inter, sans-serif" font-size="64" font-weight="800" letter-spacing="-2">Biblioteca · Backend</text>
+  <g font-family="Inter, sans-serif" font-size="26">
+    <circle cx="80" cy="388" r="10" fill="#f1e05a"/>
+    <text x="108" y="398" fill="#94A3B8" font-weight="600">JavaScript</text>
+    
+    
+  </g>
+  <text x="72" y="556" fill="#64748B" font-family="JetBrains Mono, monospace" font-size="22">AIWAVESYSTEMS · GitHub Organization</text>
+</svg>

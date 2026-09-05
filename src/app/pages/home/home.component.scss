@@ -1,0 +1,13 @@
+.section-kicker {
+	font-family: var(--font-mono);
+	font-size: 0.875rem;
+	font-weight: 600;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	color: var(--accent);
+
+	&::before {
+		content: '// ';
+		color: var(--primary);
+	}
+}

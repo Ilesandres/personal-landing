@@ -1,0 +1,13 @@
+.caret {
+	display: inline-block;
+	width: 0.55ch;
+	margin-left: 0.15ch;
+	border-bottom: 0.12em solid var(--accent);
+	animation: caret-blink 1s steps(1) infinite;
+}
+
+@keyframes caret-blink {
+	50% {
+		opacity: 0;
+	}
+}

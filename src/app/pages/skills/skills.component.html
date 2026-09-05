@@ -1,0 +1,99 @@
+<section class="py-16 md:py-24" appReveal>
+  <p class="section-kicker">// Habilidades</p>
+  <h1 class="mt-4 text-4xl font-bold tracking-tight text-foreground md:text-5xl">Habilidades</h1>
+  <p class="mt-4 max-w-2xl text-muted-foreground">
+    Tecnologías y herramientas con las que construyo cada día. Niveles estimados según mi experiencia en proyectos reales.
+  </p>
+
+  <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+    @for (category of categories; track category.title) {
+      <article class="rounded-2xl border border-border/60 bg-card p-6 transition-colors hover:border-primary/40">
+        <div class="flex items-center gap-3">
+          <span class="category-icon text-accent" aria-hidden="true">
+            @switch (category.icon) {
+              @case ('backend') {
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="3" width="20" height="7" rx="1.5"></rect><rect x="2" y="14" width="20" height="7" rx="1.5"></rect>
+                  <path d="M6 6.5h.01M6 17.5h.01M10 6.5h4M10 17.5h4"></path>
+                </svg>
+              }
+              @case ('frontend') {
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="M6 9l3 3-3 3M13 15h5"></path>
+                </svg>
+              }
+              @case ('mobile') {
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="6" y="2" width="12" height="20" rx="2.5"></rect><path d="M11 18.5h2"></path>
+                </svg>
+              }
+              @case ('games') {
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 12h4M8 10v4M15 11h.01M18 13h.01"></path>
+                  <path d="M17.32 5H6.68a4 4 0 00-3.98 3.6l-.6 8a3.5 3.5 0 005.9 2.6L10 17.5h4l2 1.7a3.5 3.5 0 005.9-2.6l-.6-8A4 4 0 0017.32 5z"></path>
+                </svg>
+              }
+              @case ('database') {
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <ellipse cx="12" cy="5" rx="8" ry="3"></ellipse><path d="M4 5v6c0 1.66 3.58 3 8 3s8-1.34 8-3V5"></path><path d="M4 11v6c0 1.66 3.58 3 8 3s8-1.34 8-3v-6"></path>
+                </svg>
+              }
+              @case ('tools') {
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"></path>
+                </svg>
+              }
+            }
+          </span>
+          <h2 class="text-lg font-bold text-foreground">{{ category.title }}</h2>
+        </div>
+
+        <ul class="mt-5 space-y-3">
+          @for (skill of category.skills; track skill.name) {
+            <li>
+              <div class="flex items-center justify-between gap-3 text-sm">
+                <span class="flex min-w-0 items-center gap-2 font-medium text-foreground">
+                  @if (skill.icon) {
+                    <img [src]="'assets/skills/' + skill.icon + '.svg'" alt="" loading="lazy" class="h-4 w-4 shrink-0" aria-hidden="true" />
+                  }
+                  <span class="truncate">{{ skill.name }}</span>
+                </span>
+                <span class="shrink-0 font-mono text-xs text-muted-foreground">{{ skill.level }}</span>
+              </div>
+              <div class="level-track mt-1.5" role="img" [attr.aria-label]="skill.name + ': ' + skill.level">
+                <span class="level-fill" [class.level-fill--1]="skill.levelId === 1" [class.level-fill--2]="skill.levelId === 2" [class.level-fill--3]="skill.levelId === 3"></span>
+              </div>
+            </li>
+          }
+        </ul>
+      </article>
+    }
+  </div>
+
+  <!-- Soft skills -->
+  <div class="mt-20">
+    <h2 class="text-2xl font-bold text-foreground">Habilidades blandas</h2>
+    <div class="mt-6 flex flex-wrap gap-3">
+      @for (item of softSkills; track item) {
+        <span class="rounded-full border border-border bg-card px-4 py-2 text-sm text-foreground transition-colors hover:border-accent/60 hover:text-accent">
+          {{ item }}
+        </span>
+      }
+    </div>
+  </div>
+
+  <!-- Otras herramientas -->
+  <div class="mt-14">
+    <h2 class="text-2xl font-bold text-foreground">Otras herramientas</h2>
+    <p class="mt-2 text-sm text-muted-foreground">
+      Diseño, edición y ofimática que complementan el perfil.
+    </p>
+    <div class="mt-6 flex flex-wrap gap-3">
+      @for (item of extraTools; track item) {
+        <span class="rounded-full border border-border bg-card px-4 py-2 text-sm text-foreground transition-colors hover:border-accent/60 hover:text-accent">
+          {{ item }}
+        </span>
+      }
+    </div>
+  </div>
+</section>
