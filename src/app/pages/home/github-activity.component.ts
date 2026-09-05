@@ -16,7 +16,7 @@ interface HeatmapWeek {
 	label?: string;
 }
 
-const HEAT_COLORS = ['#111a2e', '#312e81', '#4338ca', '#6366f1', '#22d3ee'];
+const HEAT_COLORS = ['#1a1b19', '#1b2a1e', '#25482d', '#366740', '#46a758'];
 const WEEK_PITCH = 13;
 const CELL = 11;
 const PAD_X = 12;
@@ -73,18 +73,18 @@ function describeEvent(event: GithubEvent): string {
 function eventTone(type: string): string {
 	switch (type) {
 		case 'PushEvent':
-			return 'bg-indigo-400';
+			return 'bg-[#46a758]';
 		case 'PullRequestEvent':
 		case 'IssuesEvent':
-			return 'bg-cyan-300';
+			return 'bg-[#71d083]';
 		case 'ReleaseEvent':
-			return 'bg-emerald-400';
+			return 'bg-[#53b365]';
 		case 'WatchEvent':
-			return 'bg-amber-400';
+			return 'bg-[#c2f0c2]';
 		case 'ForkEvent':
-			return 'bg-violet-400';
+			return 'bg-[#a1d2a3]';
 		default:
-			return 'bg-slate-500';
+			return 'bg-[#454843]';
 	}
 }
 
