@@ -6,41 +6,41 @@
 	--font-size: 16px;
 	--radius: 0.75rem;
 
-	/* Professional dark palette */
-	--background: #0b1120;
-	--surface: #0e1626;
-	--card: #111a2e;
-	--card-foreground: #e6edf7;
-	--popover: #101829;
-	--popover-foreground: #e6edf7;
-	--foreground: #e6edf7;
-	--muted: #8b96a8;
-	--muted-foreground: #8b96a8;
-	--primary: #6366f1;
+	/* Professional catalog palette (dark olive/grass, Radix-derived) */
+	--background: #111210;
+	--surface: #141512;
+	--card: #181917;
+	--card-foreground: #eceeec;
+	--popover: #1b1c1a;
+	--popover-foreground: #eceeec;
+	--foreground: #eceeec;
+	--muted: #afb5ad;
+	--muted-foreground: #afb5ad;
+	--primary: #46a758;
 	--primary-foreground: #ffffff;
-	--accent: #22d3ee;
-	--accent-foreground: #0b1120;
-	--secondary: #93c5fd;
-	--secondary-foreground: #0b1120;
-	--destructive: #f87171;
+	--accent: #71d083;
+	--accent-foreground: #0d1511;
+	--secondary: #3e7949;
+	--secondary-foreground: #ffffff;
+	--destructive: #e5484d;
 	--destructive-foreground: #ffffff;
-	--success: #34d399;
-	--border: rgb(148 163 184 / 0.14);
-	--input: rgb(148 163 184 / 0.18);
-	--ring: rgb(99 102 241 / 0.4);
-	--chart-1: #6366f1;
-	--chart-2: #22d3ee;
-	--chart-3: #34d399;
-	--chart-4: #a78bfa;
-	--chart-5: #fbbf24;
-	--sidebar: #0e1626;
-	--sidebar-foreground: #e6edf7;
-	--sidebar-primary: #6366f1;
+	--success: #53b365;
+	--border: rgb(244 250 237 / 0.15);
+	--input: rgb(244 250 237 / 0.22);
+	--ring: rgb(62 121 73 / 0.55);
+	--chart-1: #46a758;
+	--chart-2: #71d083;
+	--chart-3: #53b365;
+	--chart-4: #a1d2a3;
+	--chart-5: #c2f0c2;
+	--sidebar: #141512;
+	--sidebar-foreground: #eceeec;
+	--sidebar-primary: #46a758;
 	--sidebar-primary-foreground: #ffffff;
-	--sidebar-accent: #111a2e;
-	--sidebar-accent-foreground: #e6edf7;
+	--sidebar-accent: #181917;
+	--sidebar-accent-foreground: #eceeec;
 	--sidebar-border: transparent;
-	--sidebar-ring: rgb(99 102 241 / 0.4);
+	--sidebar-ring: rgb(62 121 73 / 0.55);
 }
 
 @theme inline {
@@ -109,7 +109,8 @@
 	}
 
 	::selection {
-		background: rgb(99 102 241 / 0.35);
+		background: rgb(62 121 73 / 0.45);
+		color: #ffffff;
 	}
 
 	:focus-visible {
@@ -128,13 +129,13 @@
 	}
 
 	::-webkit-scrollbar-thumb {
-		background: rgb(99 102 241 / 0.45);
+		background: rgb(70 167 88 / 0.45);
 		border-radius: 999px;
 		border: 2px solid var(--surface);
 	}
 
 	::-webkit-scrollbar-thumb:hover {
-		background: rgb(99 102 241 / 0.7);
+		background: rgb(70 167 88 / 0.7);
 	}
 
 	.route-fade {
