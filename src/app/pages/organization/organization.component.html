@@ -79,7 +79,7 @@
               </p>
               <div class="mt-4 flex items-center justify-between gap-3 text-xs">
                 @if (repo.language) {
-                  <span class="rounded-full border border-border/60 bg-surface px-2.5 py-1 font-mono text-muted-foreground">{{ repo.language }}</span>
+                  <span class="rounded-full border border-accent/15 bg-accent/10 px-2.5 py-1 font-mono text-accent">{{ repo.language }}</span>
                 }
                 @if (repo.homepage) {
                   <a [href]="repo.homepage" target="_blank" rel="noopener" class="font-semibold text-accent transition-opacity hover:opacity-80">Demo →</a>

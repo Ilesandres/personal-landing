@@ -663,6 +663,12 @@
     border-left-style: var(--tw-border-style);
     border-left-width: 1px;
   }
+  .border-accent\/15 {
+    border-color: var(--accent);
+    @supports (color: color-mix(in lab, red, red)) {
+      border-color: color-mix(in oklab, var(--accent) 15%, transparent);
+    }
+  }
   .border-accent\/40 {
     border-color: var(--accent);
     @supports (color: color-mix(in lab, red, red)) {
@@ -1032,6 +1038,10 @@
   }
   .shadow-2xl {
     --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-\[0_0_0_1px_var\(--gray-a5\)\] {
+    --tw-shadow: 0 0 0 1px var(--tw-shadow-color, var(--gray-a5));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
   .shadow-lg {

@@ -103,7 +103,7 @@
 
         <dl class="mt-4 flex flex-wrap gap-1.5">
           @for (skill of stack; track skill) {
-            <dd class="rounded-full border border-border/60 bg-surface px-2.5 py-1 font-mono text-xs text-muted-foreground">{{ skill }}</dd>
+            <dd class="rounded-full border border-accent/15 bg-accent/10 px-2.5 py-1 font-mono text-xs text-accent">{{ skill }}</dd>
           }
         </dl>
 
@@ -132,7 +132,7 @@
           [href]="profile.cvUrl"
           target="_blank"
           rel="noopener"
-          class="mt-6 flex items-center justify-center rounded-xl bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+          class="mt-6 flex items-center justify-center rounded-full bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
         >Descargar hoja de vida</a>
       </div>
     </aside>
